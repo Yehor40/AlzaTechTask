@@ -4,9 +4,13 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.20"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.20">
@@ -25,6 +29,68 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+      <Content Include="bin\Debug\net8.0\AlzaTechTask" />
+      <Content Include="bin\Debug\net8.0\AlzaTechTask.deps.json" />
+      <Content Include="bin\Debug\net8.0\AlzaTechTask.dll" />
+      <Content Include="bin\Debug\net8.0\AlzaTechTask.pdb" />
+      <Content Include="bin\Debug\net8.0\AlzaTechTask.runtimeconfig.json" />
+      <Content Include="bin\Debug\net8.0\appsettings.Development.json" />
+      <Content Include="bin\Debug\net8.0\appsettings.json" />
+      <Content Include="bin\Debug\net8.0\BouncyCastle.Cryptography.dll" />
+      <Content Include="bin\Debug\net8.0\Google.Protobuf.dll" />
+      <Content Include="bin\Debug\net8.0\Humanizer.dll" />
+      <Content Include="bin\Debug\net8.0\K4os.Compression.LZ4.dll" />
+      <Content Include="bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll" />
+      <Content Include="bin\Debug\net8.0\K4os.Hash.xxHash.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Extensions.Options.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.OpenApi.dll" />
+      <Content Include="bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll" />
+      <Content Include="bin\Debug\net8.0\Mono.TextTemplating.dll" />
+      <Content Include="bin\Debug\net8.0\MySql.Data.dll" />
+      <Content Include="bin\Debug\net8.0\MySql.EntityFrameworkCore.dll" />
+      <Content Include="bin\Debug\net8.0\MySqlConnector.DependencyInjection.dll" />
+      <Content Include="bin\Debug\net8.0\MySqlConnector.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll" />
+      <Content Include="bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll" />
+      <Content Include="bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll" />
+      <Content Include="bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+      <Content Include="bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+      <Content Include="bin\Debug\net8.0\System.CodeDom.dll" />
+      <Content Include="bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll" />
+      <Content Include="bin\Debug\net8.0\System.Drawing.Common.dll" />
+      <Content Include="bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll" />
+      <Content Include="bin\Debug\net8.0\System.Security.Permissions.dll" />
+      <Content Include="bin\Debug\net8.0\System.Windows.Extensions.dll" />
+      <Content Include="bin\Debug\net8.0\ZstdSharp.dll" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\V1\" />
       <Folder Include="Controllers\V2\" />
     </ItemGroup>
 
