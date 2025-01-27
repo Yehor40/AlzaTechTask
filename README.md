@@ -12,7 +12,7 @@ Database used: MySQL
 
 ORM used: Entity Framework
 
-Documentation:Swagger
+Documentation: Swagger
 
 Prerequisites to run the projects:
 - .NET 8.0
