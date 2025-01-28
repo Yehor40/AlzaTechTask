@@ -4,14 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 namespace AlzaTechTask.Controllers;
 
 [ApiController]
-[Route("api/v{version:apiVersion}/products")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [ApiVersion("2.0")]
-
-public class ProductsControllerV2 : ControllerBase
+//[Route("api/products")]
+public class Products2Controller : ControllerBase
 {
     private readonly IProductService _service;
 
-    public ProductsControllerV2(IProductService service)
+    public Products2Controller(IProductService service)
     {
         _service = service;
     }

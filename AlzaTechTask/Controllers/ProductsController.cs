@@ -4,16 +4,25 @@ using Microsoft.AspNetCore.Mvc;
 namespace AlzaTechTask.Controllers;
 
 [ApiController]
-[Route("api/v{version:apiVersion}/products")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [ApiVersion("1.0")]
-public class ProductsController(IProductService service) : ControllerBase
+//[Route("api/products")]
+
+public class ProductsController : ControllerBase
 {
+ private readonly IProductService _service;
+
+ public ProductsController(IProductService service)
+ {
+  _service = service;
+ }
+
  //v1
  [HttpGet]
  [MapToApiVersion("1.0")]
  public IActionResult GetAllProducts()
  {
-  var products = service.GetAllProducts();
+  var products = _service.GetAllProducts();
   return Ok(products);
  }
 //v1
@@ -21,7 +30,7 @@ public class ProductsController(IProductService service) : ControllerBase
  [MapToApiVersion("1.0")]
  public IActionResult GetProductById(int id)
  {
-  var product = service.GetProductById(id);
+  var product = _service.GetProductById(id);
   if (product != null)
   {
    return Ok(product);
@@ -34,7 +43,7 @@ public class ProductsController(IProductService service) : ControllerBase
  [MapToApiVersion("1.0")]
  public IActionResult UpdateProductDescription(int id, [FromBody] string desc)
  {
-  service.UpdateDescription(id,desc);
+  _service.UpdateDescription(id,desc);
   return Ok();
  }
  

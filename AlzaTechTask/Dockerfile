@@ -1,23 +1,19 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
+﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["AlzaTechTask/AlzaTechTask.csproj", "AlzaTechTask/"]
-RUN dotnet restore "AlzaTechTask/AlzaTechTask.csproj"
-COPY . .
-WORKDIR "/src/AlzaTechTask"
-RUN dotnet build "AlzaTechTask.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "AlzaTechTask.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Copy csproj and restore as distinct layers
+COPY . ./
+RUN dotnet restore 
 
-FROM base AS final
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish  -o out
+
+# Use the official .NET runtime image for the final container
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/out .
+
+# Expose port 80 for the application
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "AlzaTechTask.dll"]
