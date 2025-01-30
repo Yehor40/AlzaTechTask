@@ -1,18 +1,16 @@
 global using AlzaTechTask.Data;
-using System.Reflection;
 using AlzaTechTask.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
+
 // api explorer for versioning
   builder.Services.AddVersionedApiExplorer(options =>
   {
@@ -21,7 +19,7 @@ builder.Services.AddEndpointsApiExplorer();
   });
 builder.Services.AddDbContext<ProductsContext>(options =>
 {
-    options.UseMySQL(builder.Configuration.GetConnectionString("Database")!);
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Database")!);
   
 });
 
@@ -50,21 +48,7 @@ builder.Services.AddSwaggerGen(options =>
 //DI
 builder.Services.AddScoped<IProductService, ProductService>();
 var app = builder.Build();
-//middleware debugging
 
-
-
-
-// app.Use(async (context, next) =>
-// {
-//     Console.WriteLine($"Request Path: {context.Request.Path}");
-//     await next();
-// });
-
-
-
-  //  app.UseDeveloperExceptionPage();
-   
     if (app.Environment.IsDevelopment())
     {
         app.UseDeveloperExceptionPage();
@@ -78,30 +62,8 @@ var app = builder.Build();
     }
 
 app.UseHttpsRedirection();
- 
 app.UseAuthorization();
 app.MapControllers();
-
-var apiExplorer = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
-foreach (var description in apiExplorer.ApiVersionDescriptions)
-{
-    Console.WriteLine($"Discovered API Version: {description.GroupName}");
-}
-
-var endpointDataSource = app.Services.GetRequiredService<EndpointDataSource>();
-foreach (var endpoint in endpointDataSource.Endpoints)
-{
-    if (endpoint is RouteEndpoint routeEndpoint)
-    {
-        Console.WriteLine($"Endpoint: {routeEndpoint.DisplayName}");
-        Console.WriteLine($"Pattern: {routeEndpoint.RoutePattern.RawText}");
-        Console.WriteLine("Metadata:");
-        foreach (var metadata in endpoint.Metadata)
-        {
-            Console.WriteLine($"- {metadata.GetType().Name}");
-        }
-    }
-}
 
 app.Run();
 

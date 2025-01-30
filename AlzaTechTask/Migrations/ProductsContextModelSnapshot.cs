@@ -15,7 +15,7 @@ namespace AlzaTechTask.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.20")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("AlzaTechTask.Data.Product", b =>
@@ -90,6 +90,38 @@ namespace AlzaTechTask.Migrations
                             ImgUri = "/images/productBB.jpg",
                             Name = "Product BB",
                             Price = 139.99m
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "fgjj6l",
+                            ImgUri = "/images/productAC.jpg",
+                            Name = "Product AC",
+                            Price = 193.99m
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "eryik",
+                            ImgUri = "/images/productCA.jpg",
+                            Name = "Product CA",
+                            Price = 191.99m
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "jjtyuffdk",
+                            ImgUri = "/images/productCB.jpg",
+                            Name = "Product CB",
+                            Price = 160.99m
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Description = "ejjjk",
+                            ImgUri = "/images/productBC.jpg",
+                            Name = "Product BC",
+                            Price = 135.99m
                         });
                 });
 #pragma warning restore 612, 618
