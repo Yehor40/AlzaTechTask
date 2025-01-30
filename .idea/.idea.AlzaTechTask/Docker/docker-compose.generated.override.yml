@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.9"
+services:
+  alzatechtask:
+    build:
+      context: "/Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTask"
+      dockerfile: "Dockerfile"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/AlzaTechTask.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "alzatechtask:dev"
+    ports: []
+    volumes:
+    - "/Users/yehorhoda/.nuget/packages:/root/.nuget/packages"
+    - "/Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTask:/app:rw"
+    - "/Users/yehorhoda/RiderProjects/AlzaTechTask:/src:rw"
+    working_dir: "/app"
