@@ -16,9 +16,13 @@ Documentation: Swagger
 
 Prerequisites to run the projects:
 - .NET 8.0
-- MySQL Server
+- PostgreSQL
 - Rider or VS IDE
   
 Before running application seed of database needs to be done: run entityframework migration and then update database
+
+To do this use commands:
+1.dotnet ef migrations add InitialSeed
+2.dotnet ef database update
 
 In connection string use your credentials(in appsettings.json)
