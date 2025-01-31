@@ -152,3 +152,5 @@
 /Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTaskTests/obj/Debug/net8.0/ref/AlzaTechTaskTests.dll
 /Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTaskTests/bin/Debug/net8.0/Npgsql.dll
 /Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTaskTests/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTaskTests/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTaskTests/bin/Debug/net8.0/AlzaTechTask.xml

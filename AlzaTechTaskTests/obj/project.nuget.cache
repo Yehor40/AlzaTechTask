@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6AFgSUW9U4K7QQE1ANMfSuudLmooOcm9mkNETIE4x+Uwebe5qSVwNfRHUTxNKBK0e+zLkOPsyhJJhxa6KpAEfQ==",
+  "dgSpecHash": "yRuiWOYKkRE7BCLOCFcI8f/t38XiuRBgBWzs4rZdGi2J0duAgJudSkW8VKnQdsQja3bxNbsB8QBYO7SBAVuW/A==",
   "success": true,
   "projectFilePath": "/Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTaskTests/AlzaTechTaskTests.csproj",
   "expectedPackageFiles": [
@@ -72,6 +72,7 @@
     "/Users/yehorhoda/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/runtime.native.system/4.0.0/runtime.native.system.4.0.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore/7.2.0/swashbuckle.aspnetcore.7.2.0.nupkg.sha512",
+    "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.annotations/7.2.0/swashbuckle.aspnetcore.annotations.7.2.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.swagger/7.2.0/swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.swaggergen/7.2.0/swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.swaggerui/7.2.0/swashbuckle.aspnetcore.swaggerui.7.2.0.nupkg.sha512",

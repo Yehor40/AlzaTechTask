@@ -39,8 +39,8 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "Product API v1", Version = "v1", Description = "Simple API to manage products" });
     options.SwaggerDoc("v2", new OpenApiInfo { Title = "Product API v2", Version = "v2", Description = "Simple API to manage products with pagination" });
-  
-    
+    options.IncludeXmlComments(Path.Combine(System.AppContext.BaseDirectory,"AlzaTechTask.xml"));
+    options.EnableAnnotations();
    
     options.CustomSchemaIds(type=>type.FullName);
 });
@@ -49,17 +49,14 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<IProductService, ProductService>();
 var app = builder.Build();
 
-    if (app.Environment.IsDevelopment())
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
     {
-        app.UseDeveloperExceptionPage();
-        app.UseSwagger();
-        app.UseSwaggerUI(options =>
-        {
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Products API V1");
-            options.SwaggerEndpoint("/swagger/v2/swagger.json", "Products API V2");
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Products API V1");
+        options.SwaggerEndpoint("/swagger/v2/swagger.json", "Products API V2");
 
-        });
-    }
+    });
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

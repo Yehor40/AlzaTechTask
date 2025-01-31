@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlzaTechTask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8f1e996c3aebcf0913a1610736c6a2056f5a4ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+486c4c67ffaad903bb2443eea7d1d0a41f7279df")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlzaTechTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlzaTechTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

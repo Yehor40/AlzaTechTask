@@ -5,6 +5,7 @@ services:
     build:
       context: "/Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTask"
       dockerfile: "Dockerfile"
+      target: "build"
     command: []
     entrypoint:
     - "dotnet"

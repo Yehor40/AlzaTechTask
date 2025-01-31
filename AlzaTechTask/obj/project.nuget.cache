@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MMtI2fJp18Q=",
+  "dgSpecHash": "ZuyRWyWC0DfdL5SobuGgOTCNrjFvEuhHQPLHnuuqr1U9JEFoTkL/kbOjVbM+VAjAD9L0RcJslpH0nGvD8z7sMg==",
   "success": true,
   "projectFilePath": "/Users/yehorhoda/RiderProjects/AlzaTechTask/AlzaTechTask/AlzaTechTask.csproj",
   "expectedPackageFiles": [
@@ -73,6 +73,7 @@
     "/Users/yehorhoda/.nuget/packages/npgsql/8.0.4/npgsql.8.0.4.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.0/npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore/7.2.0/swashbuckle.aspnetcore.7.2.0.nupkg.sha512",
+    "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.annotations/7.2.0/swashbuckle.aspnetcore.annotations.7.2.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.swagger/7.2.0/swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.swaggergen/7.2.0/swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512",
     "/Users/yehorhoda/.nuget/packages/swashbuckle.aspnetcore.swaggerui/7.2.0/swashbuckle.aspnetcore.swaggerui.7.2.0.nupkg.sha512",
